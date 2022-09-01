@@ -1,0 +1,40 @@
+-- a)
+ SELECT nome FROM PRODS;
+ SELECT count(nome) FROM PRODS;
+ 
+ -- b)
+ SELECT tipo FROM PRODS;
+ SELECT count(tipo) FROM PRODS;
+ -- c)
+ SELECT * FROM PRODS
+ WHERE tipo = 'C';
+ 
+ SELECT * FROM PRODS
+ WHERE tipo = 'P';
+ 
+ SELECT * FROM PRODS
+ WHERE tipo = 'S';
+ 
+ SELECT nome, tipo FROM PRODS;
+ 
+ -- d)
+ 
+ SELECT AVG(preco) FROM PRODS;
+ 
+ -- e)
+ 
+ SELECT AVG(preco) FROM PRODS
+ WHERE tipo = 'S';
+ 
+ -- f)
+ 
+ SELECT AVG(preco) FROM PRODS
+ WHERE tipo = 'S';
+ 
+  SELECT AVG(preco) FROM PRODS
+ WHERE tipo = 'C';
+ 
+  SELECT AVG(preco) FROM PRODS
+ WHERE tipo = 'P';
+ 
+ 
