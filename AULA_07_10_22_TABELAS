@@ -1,0 +1,125 @@
+# UC3
+...
+
+classDiagram
+    Musica <|-- Arte
+    Musica <|-- Producao
+    Composicao --|> Beat
+    Gravacao --|> Beat
+    Pre_Producao --|> Gravacao
+    Mixagem --|> Pre_Producao
+    Masterizacao --|> Mixagem
+    Composicao --|> Producao
+    Artista <|-- Marketing
+    Musica --|> Marketing
+    Artista --|> Musica
+    Musica : string id_musica
+    Musica : Processo_de_ideias_conciliacao
+    Musica : Uma_ideia_bem_executada
+    Musica : string Musica FK
+    Musica : string id_producao
+    
+    Musica : string id_arte
+    Musica : string id_artista
+    Musica : string id_marketing
+
+    class Producao{
+        string id_producao
+      int Horas_de_captacao
+      string Processo_de_criacao
+      string Vocal
+      string Producao FK
+      string id_composicao
+      string id_musica
+      
+    }
+    class Arte{
+      string id_arte
+      string Processo_Artistico
+      string Ideias_Conceituais
+      int Tempo_de_validacao
+      string Arte FK
+      string id_musica
+    }
+    class Beat{
+      string id_beat
+      string Escolha_de_um_beatmaker
+      string Processo_de_desenvolvimento
+      string Estudar_um_beat
+      int Tempo_de_validacao
+      string Beat FK
+      string id_gravacao
+      string id_composicao
+      
+    }
+    class Marketing{
+        string id_marketing
+      string Divulgacao_correta
+      int Processo_de_entrega
+      string Marketing FK
+      string id_musica
+      string id_artista
+      
+
+    }
+    class Artista{
+        string id_artista
+        string Processo_de_desenvolver_entrega
+        string Processo_de_criacao_desenvolvimento
+        string Satisfacao_com_produto
+        string Any_questoes
+        string Artista PK
+        string id_marketing
+        string id_musica
+        
+
+    }
+    class Composicao{
+        string id_composicao
+        string Utilizar_a_lirica_da_melhor_forma_artistica
+        string Composicao FK
+        string id_beat
+        string id_producao
+        
+
+    }
+    class Pre_Producao{
+        string id_pre_producao
+        string Processo_mais_importante_para_prosseguir
+        string Satisfacao_produto
+        string Pre_Producao FK
+        string id_mixagem
+        string id_gravacao
+        
+
+    }
+    class Gravacao{
+        string id_gravacao
+        string Processo_de_utilizacao_da_voz
+        string graves
+        string autotune
+        string Gravacao FK
+        string id_pre_producao
+        string id_beat
+        
+
+
+    }
+    class Mixagem{
+        string id_mixagem
+        string Proceso_de_concluir_musica_com_melhor_producao_audiovisual
+        string Mixagem FK
+        string id_masterizacao
+        string id_pre_producao
+        
+    }
+    class Masterizacao{
+        string id_masterizacao
+        string Processo_de_arrumar_coisas_arrumar_e_extrair_o_bruto
+        string Masterizacao FK
+        string id_mixagem
+        
+
+    }
+    
+    MERMAID.JS
