@@ -1,4 +1,4 @@
--- a)
+-- a) ok
  SELECT nome FROM PRODS;
  SELECT count(nome) FROM PRODS;
  
@@ -36,5 +36,7 @@
  
   SELECT AVG(preco) FROM PRODS
  WHERE tipo = 'P';
+
+
  
  
